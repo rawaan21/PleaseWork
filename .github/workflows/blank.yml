@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - name: Send Email
-      uses: jakejarvis/email-action@v2.0.0
+      uses: dawidd6/action-send-mail@v3
       with:
         recipient: makhtar1@babson.edu
         subject: "A new commit has been pushed to main branch"
