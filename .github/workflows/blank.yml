@@ -10,14 +10,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Send Email
+    - name: Send mail
       uses: dawidd6/action-send-mail@v3
       with:
-        from: rawaan.akhtar@gmail.com
-        to:  makhtar1@babson.edu
-        subject: "A new commit has been pushed to main branch"
-        html: |
-          <p>A new commit with the message '${{github.event.head_commit.message}}' has been pushed to the main branch in repository '${{github.repository}}'.</p>
-        apiKey: ${{ secrets.SENDGRID_API_KEY }}
-        
+        connection_url: smtp://rawaan.akhtar@gmail.com:app_password@smtp.gmail.com:587
+    # Required mail subject:
+        subject: Github Actions job result
+    # Required recipients' addresses:
+        to: makhtar1@babson.edu
+    # Required sender full name (address can be skipped):
+        from: Rawaan Akhtar <rawaan.akhtar@gmail.com>
+    # Optional plain body:
+        body: Build job of ${{github.repository}} completed successfully!
         
