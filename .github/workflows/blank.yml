@@ -13,13 +13,9 @@ jobs:
     - name: Send mail
       uses: dawidd6/action-send-mail@v3
       with:
-        connection_url: smtp://rawaan.akhtar@gmail.com:app_password@smtp.gmail.com:587
-    # Required mail subject:
+        connection_url: smtp://rawaan.akhtar@gmail.com:mgxmdxiyzhidocma@smtp.gmail.com:587
         subject: Github Actions job result
-    # Required recipients' addresses:
         to: makhtar1@babson.edu
-    # Required sender full name (address can be skipped):
         from: Rawaan Akhtar <rawaan.akhtar@gmail.com>
-    # Optional plain body:
         body: Build job of ${{github.repository}} completed successfully!
         
