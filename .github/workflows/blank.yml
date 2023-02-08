@@ -13,14 +13,14 @@ jobs:
     - name: Send Email
       uses: docker://anonestep/email-action:v1
       with:
-        recipient: rawaan.akhtar@gmail.com
+        recipient: rawaan@bu.edu
         subject: "A new commit has been pushed to main branch"
         body: "A new commit with the message '${{github.event.head_commit.message}}' has been pushed to the main branch in repository '${{github.repository}}'."
       env:
         EMAIL_HOST: smtp.gmail.com
         EMAIL_PORT: 587
-        EMAIL_USER: makhtar1@babson.edu
-        EMAIL_PASS: ${{ secrets.ChicagoBulls1! }}
+        EMAIL_USER: rawaan.akhtar@gmail.com
+        EMAIL_PASS: ${{ secrets.mgxmdxiyzhidocma}}
         
         
         
