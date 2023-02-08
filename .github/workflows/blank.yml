@@ -13,11 +13,11 @@ jobs:
     - name: Send Email
       uses: dawidd6/action-send-mail@v3
       with:
-        to: makhtar1@babson.edu
+        from: rawaan.akhtar@gmail.com
+        to:  makhtar1@babson.edu
         subject: "A new commit has been pushed to main branch"
-        html: "A new commit with the message '${{github.event.head_commit.message}}' has been pushed to the main branch in repository '${{github.repository}}'."
-      env:
-        SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
-        
+        html: |
+          <p>A new commit with the message '${{github.event.head_commit.message}}' has been pushed to the main branch in repository '${{github.repository}}'.</p>
+        apiKey: ${{ secrets.SENDGRID_API_KEY }}
         
         
